@@ -23,3 +23,18 @@ locals {
 output "final_message" {
   value = local.full_message
 }
+
+# 1. The Resource: Create a local text file
+resource "local_file" "hello_world" {
+  filename = "${path.module}/hello.txt"
+  content  = "This file was created by Terraform on my Mac!"
+}
+
+# 2. Output the location
+output "file_path" {
+  value = local_file.hello_world.filename
+}
+resource "local_file" "hello_world1" {
+  filename = "${path.module}/hello.txt"
+  content  = "This file was created by Terraform on my Mac!"
+}
