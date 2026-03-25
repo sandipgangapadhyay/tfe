@@ -1,2 +1,2 @@
 user_greeting = "Hello from Sandip"
-name = saanvi
+names = "saanvi"
