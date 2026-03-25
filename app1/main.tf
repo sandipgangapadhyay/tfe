@@ -8,6 +8,7 @@ variable "user_greeting" {
 variable "name" {
   description = "The message to display in the output"
   type        = string
+  default     = "NA"
 }
 
 # 2. Define Local Variables (using the input variable)
