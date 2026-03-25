@@ -1,1 +1,0 @@
-user_greeting = "Hello from mantu"
