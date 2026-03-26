@@ -38,3 +38,12 @@ resource "local_file" "hello_world1" {
   filename = "${path.module}/hello.txt"
   content  = "This file was created by Terraform on my Mac!"
 }
+
+resource "aws_s3_bucket" "my_simple_bucket" {
+  bucket = "my-unique-bucket-name-2026-sandip" # Must be globally unique
+
+  tags = {
+    Name        = "My Simple Bucket"
+    Environment = "Dev"
+  }
+}
